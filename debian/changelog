@@ -1,0 +1,158 @@
+nbformat (5.1.3-1) unstable; urgency=medium
+
+  [ Gordon Ball ]
+  * d/watch: new github tarball URL
+  * New upstream version 5.1.3
+  * Rebase patches
+
+  [ Julien Puydt ]
+  * Fix d/watch
+
+ -- Gordon Ball <gordon@chronitis.net>  Sun, 15 Aug 2021 19:44:00 +0000
+
+nbformat (5.1.2-1) unstable; urgency=medium
+
+  * d/watch: insert ~ before alpha|beta|rc
+  * Drop obsolete dependency python3-nose
+  * New upstream version 5.1.2
+
+ -- Gordon Ball <gordon@chronitis.net>  Sun, 17 Jan 2021 20:31:17 +0000
+
+nbformat (5.0.8-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Update Maintainer field with new Debian Python Team
+    contact address.
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+  [ Gordon Ball ]
+  * New upstream version 5.0.8
+  * Patch tests since fastjsonschema is unavailable
+
+ -- Gordon Ball <gordon@chronitis.net>  Wed, 14 Oct 2020 19:37:46 +0000
+
+nbformat (5.0.7-1) unstable; urgency=medium
+
+  * New upstream version 5.0.7
+
+ -- Gordon Ball <gordon@chronitis.net>  Fri, 24 Apr 2020 19:30:42 +0000
+
+nbformat (5.0.5-1) unstable; urgency=medium
+
+  * Run the test suite as an autopkgtest
+  * New upstream version 5.0.5
+
+ -- Gordon Ball <gordon@chronitis.net>  Wed, 01 Apr 2020 18:07:58 +0000
+
+nbformat (5.0.4-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump std-ver to 4.5.0.
+  * Use my debian.org mail address.
+
+ -- Julien Puydt <jpuydt@debian.org>  Mon, 27 Jan 2020 23:33:39 +0100
+
+nbformat (5.0.3-1) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * debian/copyright: use spaces rather than tabs to start continuation
+    lines.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+  [ Gordon Ball ]
+  * New upstream version 5.0.3
+
+ -- Gordon Ball <gordon@chronitis.net>  Thu, 09 Jan 2020 19:33:58 +0000
+
+nbformat (4.4.0-3) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Bump Standards-Version to 4.4.1.
+
+  [ Gordon Ball ]
+  * Drop python 2.7 support (Closes: #937119)
+
+ -- Gordon Ball <gordon@chronitis.net>  Tue, 12 Nov 2019 15:51:46 +0000
+
+nbformat (4.4.0-2) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org
+  * d/copyright: Fix Format URL to correct one
+  * d/control: Remove ancient X-Python-Version field
+  * d/control: Remove ancient X-Python3-Version field
+  * Convert git repository from git-dpm to gbp layout
+  * Use 'python3 -m sphinx' instead of sphinx-build for building docs
+  * Use debhelper-compat instead of debian/compat.
+
+  [ Gordon Ball ]
+  * Update Standards-Version to 4.4.0
+  * Update debhelper compat level to 12
+  * Declare that root is not required for build
+
+ -- Gordon Ball <gordon@chronitis.net>  Fri, 27 Sep 2019 18:01:27 +0000
+
+nbformat (4.4.0-1) unstable; urgency=medium
+
+  [ Julien Puydt ]
+  * New upstream release. (Closes: #847393, #864700)
+  * Bump d/watch to version 4.
+
+  [ Gordon Ball ]
+  * Bump Standards-Version to 4.1.0 (no changes required)
+  * Use python3 sphinx for documentation
+  * Add dependency on jupyter-core for jupyter-nbformat to ensure the script
+    can be invoked as "jupyter nbformat"
+  * Add myself to uploaders in d/control
+  * Use sphinxdoc:Built-Using for the documentation package
+  * New upstream release.
+  * Add Testsuite: autopkgtest-pkg-python
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Sun, 03 Sep 2017 16:36:44 +0200
+
+nbformat (4.2.0-1) unstable; urgency=medium
+
+  [ Gordon Ball ]
+  * Team upload.
+  * New upstream release.
+  * Use LC_ALL=C.UTF-8 in d/rules to avoid encoding errors during testing
+
+  [ Julien Puydt ]
+  * Add Multi-Arch:foreign to the -doc following tracker's hint.
+
+ -- Gordon Ball <gordon@chronitis.net>  Sun, 04 Dec 2016 12:56:02 +0100
+
+nbformat (4.1.0-2) unstable; urgency=medium
+
+  [ Tobias Hansen ]
+  * Team upload.
+  * Upload to unstable.
+
+  [ Julien Puydt ]
+  * Push dh compat up to 10.
+
+  [ Gordon Ball ]
+  * Split the jupyter-trust script into a separate package (named
+    jupyter-nbformat), which depends on the python 3 library package.
+
+ -- Tobias Hansen <thansen@debian.org>  Wed, 02 Nov 2016 19:50:31 +0000
+
+nbformat (4.1.0-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Explicitly put the package under the Debian Python Module Team
+    umbrella.
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Wed, 17 Aug 2016 11:18:26 +0200
+
+nbformat (4.0.1-1) experimental; urgency=medium
+
+  [ Julien Puydt ]
+  * Initial release. (Closes: #800404)
+
+  [ Ondřej Nový ]
+  * Fixed VCS URL (https)
+
+ -- Julien Puydt <julien.puydt@laposte.net>  Fri, 22 Jul 2016 20:51:14 +0200

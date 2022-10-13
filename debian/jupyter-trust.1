@@ -1,0 +1,45 @@
+.TH JUPYTER-TRUST "1" "September 2015" "jupyter-trust" "User Commands"
+.SH NAME
+jupyter-trust \- Sign one or more Jupyter notebooks with your key,
+to trust their dynamic (HTML, Javascript) output
+.SH DESCRIPTION
+.PP
+When unsigned, you have to re\-execute the notebook to see output.
+.SH OPTIONS
+.PP
+Arguments that take values are actually convenience aliases to full
+Configurables, whose aliases are listed on the help line. For more information
+on full configurables, see '\-\-help\-all'.
+.PP
+\fB\-\-reset\fR
+.IP
+Delete the trusted notebook cache.
+All previously signed notebooks will become untrusted.
+.PP
+\fB\-\-debug\fR
+.IP
+set log level to logging.DEBUG (maximize logging output)
+.PP
+\fB\-y\fR
+.IP
+Answer yes to any questions instead of prompting.
+.PP
+\fB\-\-generate\-config\fR
+.IP
+generate default config file
+.PP
+\fB\-\-config=\fR<Unicode> (JupyterApp.config_file)
+.IP
+Default: u''
+Full path of a config file.
+.PP
+\fB\-\-log\-level=\fR<Enum> (Application.log_level)
+.IP
+Default: 30
+Choices: (0, 10, 20, 30, 40, 50, 'DEBUG', 'INFO', 'WARN', 'ERROR', 'CRITICAL')
+Set the log level by value or name.
+.PP
+To see all available configurables, use `\-\-help\-all`
+.SH EXAMPLES
+.IP
+jupyter trust mynotebook.ipynb and_this_one.ipynb

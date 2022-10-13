@@ -1,0 +1,2 @@
+Test-Command: env HOME=$AUTOPKGTEST_TMP python3 -m pytest nbformat -k 'not fallback_validator'
+Depends: @, python3-pytest, python3-testpath

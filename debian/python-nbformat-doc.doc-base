@@ -1,0 +1,9 @@
+Document: python-nbformat-doc
+Title: NBFormat Documentation
+Author: Jupyter Development Team
+Abstract: Sphinx documentation for nbformat
+Section: Programming/Python
+
+Format: HTML
+Index: /usr/share/doc/python-nbformat-doc/html/index.html
+Files: /usr/share/doc/python-nbformat-doc/html/*

@@ -1,0 +1,2 @@
+0001-Use-setuptools-for-all-targets-so-python-Depends-sub.patch
+0002-test_validator-test-jsonschema-only.patch
