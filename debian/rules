@@ -1,13 +1,5 @@
 #!/usr/bin/make -f
 
-#export DH_VERBOSE=1
-# TODO: see if we can rm this work around after
-# https://github.com/jupyter/nbformat/issues/76 is fixed
-# Generally, it's an upstream bug if we need to set this for the whole build.
-export LC_ALL=C.UTF-8
-export PYBUILD_BEFORE_TEST=cp nbformat/tests/*.ipynb {build_dir}/nbformat/tests/
-export PYBUILD_TEST_ARGS=-k 'not fallback_validator'
-
 %:
 	dh $@ --with python3,sphinxdoc --buildsystem=pybuild
 
@@ -17,6 +9,6 @@ override_dh_auto_install:
 
 override_dh_sphinxdoc:
 ifeq (,$(findstring nodocs, $(DEB_BUILD_OPTIONS)))
-	PYTHONPATH=. python3 -m sphinx -b html docs debian/python-nbformat-doc/usr/share/doc/python-nbformat-doc/html
+	PYTHONPATH=. http_proxy=http://127.0.0.1:9 https_proxy=http://127.0.0.1:9 python3 -m sphinx -b html docs debian/python-nbformat-doc/usr/share/doc/python-nbformat-doc/html
 	dh_sphinxdoc -O--buildsystem=pybuild
 endif

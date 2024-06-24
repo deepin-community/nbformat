@@ -1,0 +1,30 @@
+From: Gordon Ball <gordon@chronitis.net>
+Date: Sun, 18 Sep 2022 09:00:04 +0000
+Subject: Patch out trivial test requiring pep440 module
+Forwarded: not-needed
+
+---
+ tests/test_api.py | 5 -----
+ 1 file changed, 5 deletions(-)
+
+--- a/tests/test_api.py
++++ b/tests/test_api.py
+@@ -10,7 +10,6 @@
+ from typing import Any, Dict
+ 
+ from jsonschema import ValidationError
+-from pep440 import is_canonical
+ 
+ from nbformat import __version__ as nbf_version
+ from nbformat import current_nbformat, read, write, writes
+@@ -20,10 +19,6 @@
+ from .base import TestsBase
+ 
+ 
+-def test_canonical_version():
+-    assert is_canonical(nbf_version)
+-
+-
+ class TestAPI(TestsBase):
+     def test_read(self):
+         """Can older notebooks be opened and automatically converted to the current
