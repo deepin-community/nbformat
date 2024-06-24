@@ -1,0 +1,33 @@
+From: Julian Gilbey <jdg@debian.org>
+Subject: Obtain version number from source package rather than installed one
+ The existing code required the nbformat package to already be installed,
+ so the build failed in a clean environment.
+Forwarded: not-needed
+Last-Update: 2023-07-13
+
+--- a/docs/conf.py
++++ b/docs/conf.py
+@@ -19,7 +19,7 @@
+ 
+ import os
+ import shutil
+-from importlib.metadata import version as get_version
++from subprocess import PIPE, run
+ 
+ HERE = os.path.abspath(os.path.dirname(__file__))
+ 
+@@ -73,7 +73,13 @@
+ # built documents.
+ #
+ # The short X.Y version.
+-version = ".".join(get_version("nbformat").split(".")[:2])
++full_version_bytes = run(
++    "cd .. && /usr/bin/hatchling version",
++    shell=True,
++    check=True,
++    stdout=PIPE).stdout
++full_version = full_version_bytes.decode().strip()
++version = ".".join(full_version.split(".")[:2])
+ # The full version, including alpha/beta/rc tags.
+ release = version
+ 
